@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/images/img_restaurant1.jpg">
+    <title>New pass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(#8a4af3, #3f51b5);
+        }
+        main {
+            background-color: rgb(251, 253, 252);
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 60%;
+            justify-content: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .div_input {
+            width: 200px;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+        div input {
+            border: none;
+            margin-top: 50;
+            outline: none;
+        }
+        button {
+            width: 220px;
+            height: 40px;
+            border-radius: 30px;
+            background-color: rgb(55, 197, 53);
+            margin: 10px 0 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+        }
+        img {
+            width: 180px;
+            height: 180px;
+            border-radius: 100px;
+        }
+        h3 {
+            font-family: Poppins;
+        }
+        p {
+            color: rgb(142, 133, 133);
+        }
+
+        .p-forgot-pass a {
+            color: rgb(142, 133, 133);
+            font-weight: 700;
+        }
+        .div_forgot {
+            margin-bottom: 60px;
+            justify-content: center;
+            display: flex;
+        }
+        .div_create_account {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .a_create_account {
+            color: rgb(142, 133, 133);
+            font-weight: 700;
+        }
+        .main_div {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <img src="./assets/images/img_restaurant1.jpg">
+        <div class="main_div">
+            <form>
+                <h3>New Password</h3>
+
+                <div class="div_filed">
+                    <div class="div_input">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                            <rect width="24" height="24" fill="none" />
+                            <path fill="black"
+                                d="M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h1V6q0-2.075 1.463-3.537T12 1t3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm6-5q.825 0 1.413-.587T14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17M9 8h6V6q0-1.25-.875-2.125T12 3t-2.125.875T9 6z" />
+                        </svg>
+                        <input type="password" placeholder="New your password">
+                    </div>
+                    <div class="div_input">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                            <rect width="24" height="24" fill="none" />
+                            <path fill="black"
+                                d="M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h1V6q0-2.075 1.463-3.537T12 1t3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm6-5q.825 0 1.413-.587T14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17M9 8h6V6q0-1.25-.875-2.125T12 3t-2.125.875T9 6z" />
+                        </svg>
+                        <input type="password" id="password" name="password" placeholder="Confirm password">
+                    </div>
+                    <button type="submit" formaction="signin.html">Submit</button>
+                    <div class="div_create_account">
+                        <a href="signin.html" class="a_create_account">Login</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 16 9">
+                            <rect width="16" height="9" fill="none" />
+                            <path fill="#9a9898" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5" />
+                            <path fill="#9a9898" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
+                        </svg>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

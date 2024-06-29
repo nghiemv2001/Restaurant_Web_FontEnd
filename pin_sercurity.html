@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="./assets/images/img_restaurant1.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN Require</title>
+    <style>
+        .pin-input {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            margin: 30px auto;
+        }
+
+        .pin-input input {
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(#8a4af3, #3f51b5);
+        }
+
+        main {
+            background-color: rgb(251, 253, 252);
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 60%;
+            justify-content: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .div_input {
+            width: 200px;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+
+        div input {
+            border: none;
+            outline: none;
+
+        }
+        button {
+            width: 220px;
+            height: 40px;
+            border-radius: 30px;
+            background-color: rgb(55, 197, 53);
+            margin: 10px 0 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+        }
+        img {
+            width: 180px;
+            height: 180px;
+            border-radius: 100px;
+        }
+        h3 {
+            font-family: Poppins;
+        }
+        p {
+            color: rgb(142, 133, 133);
+        }
+        .p-forgot-pass a {
+            color: rgb(142, 133, 133);
+            font-weight: 700;
+        }
+        .div_create_account {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .a_create_account {
+            color: rgb(142, 133, 133);
+            font-weight: 700;   
+        }
+        .main_div {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img src="./assets/images/img_restaurant1.jpg">
+        <div class="main_div">
+            <form>
+                <h3>PIN</h3>
+                <div class="pin-input">
+                    <input type="text" maxlength="1" oninput="moveToNext(this, 'pin2')">
+                    <input id="pin2" type="text" maxlength="1" oninput="moveToNext(this, 'pin3')">
+                    <input id="pin3" type="text" maxlength="1" oninput="moveToNext(this, 'pin4')">
+                    <input id="pin4" type="text" maxlength="1">
+                </div><button type="submit" formaction="new_pass.html" >Submit</button>
+                <div class="div_create_account">
+                    <a href="signin.html" class="a_create_account">Resend pin</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 16 9">
+                        <rect width="16" height="9" fill="none" />
+                        <path fill="#9a9898" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5" />
+                        <path fill="#9a9898" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z" />
+                    </svg>
+                </div>
+            </form>
+        </div>
+    </main>
+
+<script>
+    function moveToNext(current, nextFieldID) {
+        if (current.value.length >= current.maxLength) {
+            document.getElementById(nextFieldID).focus();
+        }
+    }
+</script>
+
+</body>
+</html>
