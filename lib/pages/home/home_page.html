@@ -4,150 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Rustic Elegance</title>
     <link rel="icon" type="image/x-icon" href="/assets/images/img_restaurant1.jpg">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap"
-        rel="stylesheet">
-    <style>
-        .cormorant-uniquifier {
-            font-family: "Cormorant", serif;
-            font-optical-sizing: auto;
-            font-weight: 100;
-            font-style: normal;
-        }
-
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-image: #e6e6e6;
-        }
-
-        main {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        a {
-            color: blue;
-            text-decoration: none;
-            padding-right: 10px;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-
-            color: black;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-
-        .img_header {
-            width: 180px;
-            height: 180px;
-            border-radius: 100px;
-        }
-
-        h3 {
-            margin-left: 50px;
-            font-family: Poppins;
-        }
-
-        p {
-            color: rgb(142, 133, 133);
-        }
-
-        header {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-
-        }
-
-        .div_group_header {
-            display: flex;
-            flex-direction: row;
-        }
-
-        .div_group_header a {
-            font-size: 20px;
-            padding: 0px 10px 0 10px;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-family: "Cormorant";
-            color: black;
-        }
-
-        .img_main {
-            height: 333px;
-            width: 666px;
-        }
-    </style>
+    <link rel="stylesheet" href="./home.css" />
 </head>
 
 <body>
     <header>
         <img class="img_header" src="/assets/images/img_logo.png" />
-        <div class="div_group_header">
-            <a href="">RESERVATIONS</a>
-            <a href="">ABOUT</a>
-            <a href="">TEAM</a>
-            <a href="">EVENTS</a>
-            <a href="">HOME</a>
-        </div>
     </header>
-    <main>
-        <img class="img_main" src="/assets/images/img_home_first.jpg">
-        <div>
-            <h2>Welcome to
-            </h2>
-            <h2>Eleven Madison Park</h2>
+    <main class="tab_content">
+        <div class="div_group_header">
+            <button class="btn_tab" onclick="loadTab(0)">RESERVATIONS</button>
+            <button class="btn_tab" onclick="loadTab(1)">ABOUT</button>
+            <button class="btn_tab" onclick="loadTab(2)">TEAM</button>
+            <button class="btn_tab" onclick="loadTab(3)">EVENTS</button>
+            <button class="btn_tab" onclick="loadTab(4)">HOME</button>
         </div>
-        <div>
-            Eleven Madison Park is a fine dining restaurant located in the heart of New York City. The restaurant
-            overlooks Madison Square Park, one of the most beautiful parks in Manhattan, and sits at the base of a
-            historic Art Deco building on the corner of East 24th Street and Madison Avenue. Located here since 1998, it
-            underwent a full-scale renovation and redesign in the summer of 2017.
+        <div class="group_img">
+            <div class="slider">
+                <img class="img_main" src="/assets/images/img_home_first.jpg" alt="image" />
+                <img class="img_main" src="/assets/images/img_home_second.jpg" alt="image" />
+                <img class="img_main" src="/assets/images/img_home_three.jpg" alt="image" />
+                <img class="img_main" src="/assets/images/img_home_four.jpg" alt="image" />
+                <img class="img_main" src="/assets/images/img_home_five.jpg" alt="image" />
+            </div>
+        </div>
+        <div class="content_box">
+            <div class="content" id="content-0"></div>
+            <div class="content" id="content-1"></div>
+            <div class="content" id="content-2"></div>
+            <div class="content" id="content-3"></div>
+            <div class="content" id="content-4"></div>
+        </div>
 
-            The restaurant has been owned by Chef Daniel Humm since 2011 and during that time it has evolved
-            considerably, both in food and in experience. Our tasting, five-course, and bar menus consist of entirely
-            plant-based dishes. Guests can also visit the bar for light snacks, or simply for a cocktail or glass of
-            wine
+        <div class="grid_div">
+            <div class="div_address">
+                <p>
+                    11 Madison Avenue
+                </p>
+                <p>
+                    New York, NY 10010
+                </p>
+                <p>
+                    212.889.0905
+                </p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                    <rect width="24" height="24" fill="none" />
+                    <path fill="black"
+                        d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                </svg>
+            </div>
+            <div class="div_signup">
+                <div>
+                    <p>Sign up with your email address to receive news and updates.</p>
+                </div>
+
+                <form>
+                    <input type="text" placeholder="First Name" />
+                    <input type="text" placeholder="Last Name" />
+                    <input type="email" placeholder="Email Name" />
+
+                </form>
+                <button>Sign Up</button>
+            </div>
+            <div class="div_group_more">
+                <a href="">Wine Club</a>
+                <a href="">FAQs</a>
+                <a href="">Press & Accolades</a>
+                <a href="">Careers</a>
+                <a href="">Contact Us</a>
+                <a href="">Gift Cards</a>
+                <a href="">Make It Nice</a>
+            </div>
+
+        </div>
+        <div class="div_footer_p">
+            <p>We respect your privacy.</p>
         </div>
     </main>
+    <script>
+        const slider = document.querySelector('.slider');
+const images = slider.querySelectorAll('img');
+const imageCount = images.length;
+let currentIndex = 0;
+
+function showNextImage() {
+   currentIndex = (currentIndex + 1) % imageCount;
+    const offset = -currentIndex * 100;
+    slider.style.transform = `translateX(${offset}%)`;
+}
+setInterval(showNextImage, 2000);
+        const tabs = document.querySelectorAll(".btn_tab");
+        const all_content = document.querySelectorAll(".content");
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(tab => { tab.classList.remove('active') });
+                tab.classList.add('active');
+                all_content.forEach(content => { content.classList.remove('active') });
+                loadTab(index);
+            });
+        });
+
+        const loadTab = (index) => {
+            const targetEl = document.getElementById(`content-${index}`);
+            const filePath = `/lib/components/tabs/tab-${index}.html`;
+
+            fetch(filePath)
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    } else {
+                        throw new Error('Failed to load content');
+                    }
+                })
+                .then(htmlSnippet => {
+                    all_content.forEach(content => content.innerHTML = '');
+                    targetEl.innerHTML = htmlSnippet; 
+                    targetEl.classList.add('active'); 
+                })
+                .catch(error => {
+                    console.error('Error loading content:', error);
+                    targetEl.innerHTML = '<p>Failed to load content.</p>';
+                    targetEl.classList.add('active'); 
+                });
+        };
+        document.addEventListener('DOMContentLoaded', () => {
+            tabs[0].click();
+        });
+    </script>
 </body>
 
 </html>

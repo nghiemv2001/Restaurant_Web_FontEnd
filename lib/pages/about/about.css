@@ -1,0 +1,281 @@
+.cormorant-uniquifier {
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: #e6e6e6;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.img_header {
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+}
+
+h3 {
+    margin-left: 50px;
+    font-family: Poppins;
+}
+
+p {
+    color: rgb(142, 133, 133);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.div_group_header {
+    display: flex;
+    flex-direction: row;
+}
+
+.div_group_header a {
+    font-size: 20px;
+    padding: 0px 10px 0 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Cormorant";
+    color: black;
+}
+
+.img_main {
+    height: 333px;
+    width: 666px;
+}
+
+.group_img {
+    margin-top: 20px;
+    overflow: hidden;
+    height: 333px;
+    width: 666px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+.about_text {
+    width: 60%;
+}
+
+.about_text p {
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 500;
+    color: black;
+}
+
+.group_hours {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.group_hours a {
+    color: black;
+    text-decoration: underline;
+    font-size: 20px;
+    text-align: center;
+}
+
+.group_hours h2 {
+    text-align: center;
+}
+
+.group_hours p {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.div_footer {
+    width: 900px;
+}
+
+.div_footer p {
+
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+
+    font-size: 23px;
+    font-style: italic;
+}
+
+.btn_book_now {
+    background-color: rgb(227, 67, 46);
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_book_now div {
+    margin-left: 10px;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 13px;
+    height: 20px;
+    background-color: aliceblue;
+    color: rgb(227, 67, 46);
+    border-radius: 2px;
+}
+
+.grid_div {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    grid-gap: 20px;
+
+}
+
+.grid_div div {
+    text-align: center;
+}
+
+.div_address p {
+    color: black;
+    font-size: 18px;
+}
+
+.div_signup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.div_signup p {
+    color: black;
+    font-size: 21px;
+}
+
+.div_signup div {
+    width: 500px;
+
+}
+.div_signup input {
+    height: 50px;
+    width: 270px;
+    margin: 0 0 10px 0;
+    border: 1px solid rgb(215, 210, 210);
+    border-radius: 3px;
+    padding: 10px 0 10px 30px;
+    outline: none;
+    font-size: 20px;
+
+}
+
+.div_signup input::placeholder {
+    font-size: 20px;
+    opacity: 0.4;
+}
+
+.div_signup button {
+    height: 60px;
+    width: 100px;
+    margin-top: 20px;
+    background-color: #15325C;
+    outline: none;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    font-size: 19px;
+}
+
+.div_group_more {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.div_group_more a {
+    color: black;
+    font-size: 20px;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+.div_footer_p p{
+    color: black;
+    font-size: 16px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rustic Elegance</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/img_restaurant1.jpg">
+    <link rel="stylesheet" href="./home.css" />
+</head>
+
+<body>
+    <header>
+        <img class="img_header" src="/assets/images/img_logo.png" />
+    </header>
+    <main>
+
+        <div class="group_img">
+            <div class="slider">
+                <img class="img_main" src="/assets/images/img_home_first.jpg" alt="image" />
+                <img class="img_main" src="/assets/images/img_home_second.jpg" alt="image" />
+                <img class="img_main" src="/assets/images/img_home_three.jpg" alt="image" />
+                <img class="img_main" src="/assets/images/img_home_four.jpg" alt="image" />
+                <img class="img_main" src="/assets/images/img_home_five.jpg" alt="image" />
+            </div>
+
+        </div>
+
+
+        
+            <div class="div_text_welcome">
+                <h1>Events & Private Dining</h1>
+            </div>
+
+        
+        <div class="about_text">
+            <p>We have one private dining room which can accommodate a seated dinner of up to 30 guests. If you'd like
+                to explore options for larger parties (including a full restaurant buyout), don't hesitate to reach out.
+            </p>
+            <p>For more information about hosting an event with us, please contact the Private Dining and Special Events
+                Department using the form below.</p>
+            <p>Please note, our private dining floor will be closed for a renovation from May to September, 2024.</p>
+        </div>
+        <button class="btn_inquire">Inquire</button>
+    </main>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const images = slider.querySelectorAll('img');
+        const imageCount = images.length;
+        let currentIndex = 0;
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % imageCount;
+            const offset = -currentIndex * 100;
+            slider.style.transform = `translateX(${offset}%)`;
+        }
+        setInterval(showNextImage, 2000);
+        const tabs = document.querySelectorAll(".btn_tab");
+        const all_content = document.querySelectorAll(".content");
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(tab => { tab.classList.remove('active') });
+                tab.classList.add('active');
+                all_content.forEach(content => { content.classList.remove('active') });
+                loadTab(index);
+            });
+        });
+
+        const loadTab = (index) => {
+            const targetEl = document.getElementById(`content-${index}`);
+            const filePath = `/lib/components/tabs/tab-${index}.html`;
+
+            fetch(filePath)
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    } else {
+                        throw new Error('Failed to load content');
+                    }
+                })
+                .then(htmlSnippet => {
+                    all_content.forEach(content => content.innerHTML = '');
+                    targetEl.innerHTML = htmlSnippet;
+                    targetEl.classList.add('active');
+                })
+                .catch(error => {
+                    console.error('Error loading content:', error);
+                    targetEl.innerHTML = '<p>Failed to load content.</p>';
+                    targetEl.classList.add('active');
+                });
+        };
+        document.addEventListener('DOMContentLoaded', () => {
+            tabs[0].click();
+        });
+    </script>
+</body>
+
+</html>
